@@ -4,6 +4,7 @@ public class F1 extends Car {
 
     public F1(String name, boolean isManual) {
         super(name);
+        super.setManual(isManual);
         //Use arbitrary values for parameters which are not mentioned
     }
 
@@ -29,16 +30,16 @@ public class F1 extends Car {
         if(newSpeed > 0) {
             changeSpeed(newSpeed, getCurrentDirection());
             if(newSpeed>=1 && newSpeed<=50)
-                setCurrentGear(1);
+                changeGear(1);
             else if(newSpeed>=51 && newSpeed<=100)
-                setCurrentGear(2);
+                changeGear(2);
             else if(newSpeed>=101 && newSpeed<=150)
-                setCurrentGear(3);
+                changeGear(3);
             else if(newSpeed>=151 && newSpeed<=200)
-                setCurrentGear(4);
+                changeGear(4);
             else if(newSpeed>=201 && newSpeed<=250)
-                setCurrentGear(5);
-            else setCurrentGear(6);
+                changeGear(5);
+            else changeGear(6);
         }
     }
 }
