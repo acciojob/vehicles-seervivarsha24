@@ -57,7 +57,7 @@ public class Car extends Vehicle {
     public void setSeats(int seats) {
         this.seats = seats;
     }
-    public boolean getManual() {
+    public boolean isManual() {
         return isManual;
     }
 
